@@ -19,7 +19,9 @@ public class DomainEntry {
     private Long id;
     private String domain;
     private String category;
+    private int httpStatusCode;
     private LocalDateTime httpLastTime;
+    private int httpsStatusCode;
     private LocalDateTime httpsLastTime;
     private String httpRedirect;
     private String httpsRedirect;
@@ -61,6 +63,15 @@ public class DomainEntry {
         this.category = category;
     }
 
+    @Column(name="http_status")
+    public int getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public void setHttpStatusCode(int httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+    }
+
     @Column(name="http_last_time")
     public LocalDateTime getHttpLastTime() {
         return this.httpLastTime;
@@ -68,6 +79,15 @@ public class DomainEntry {
 
     public void setHttpLastTime(LocalDateTime httpLastTime) {
         this.httpLastTime = httpLastTime;
+    }
+
+    @Column(name="https_status")
+    public int getHttpsStatusCode() {
+        return this.httpsStatusCode;
+    }
+
+    public void setHttpsStatusCode(int httpsStatusCode) {
+        this.httpsStatusCode = httpsStatusCode;
     }
 
     @Column(name="https_last_time")
