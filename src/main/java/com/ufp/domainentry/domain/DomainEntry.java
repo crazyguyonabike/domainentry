@@ -19,10 +19,15 @@ public class DomainEntry {
     private Long id;
     private String domain;
     private String category;
+
+    private LocalDateTime working;
+
     private int httpStatusCode;
     private LocalDateTime httpLastTime;
+
     private int httpsStatusCode;
     private LocalDateTime httpsLastTime;
+
     private String httpRedirect;
     private String httpsRedirect;
 
@@ -44,7 +49,7 @@ public class DomainEntry {
     public void setId(Long id) {
         this.id = id;
     }
-    
+
     @Column(name="domain")
     public String getDomain() {
         return this.domain;
@@ -61,6 +66,15 @@ public class DomainEntry {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    @Column(name="working")
+    public LocalDateTime getWorking() {
+        return this.working;
+    }
+
+    public void setWorking(LocalDateTime working) {
+        this.working = working;
     }
 
     @Column(name="http_status")
@@ -117,7 +131,3 @@ public class DomainEntry {
         this.httpsRedirect = httpsRedirect;
     }
 }
-
-    
-
-    
