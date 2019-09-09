@@ -22,10 +22,10 @@ public class DomainEntry {
 
     private LocalDateTime working;
 
-    private int httpStatusCode;
+    private Integer httpStatusCode;
     private LocalDateTime httpLastTime;
 
-    private int httpsStatusCode;
+    private Integer httpsStatusCode;
     private LocalDateTime httpsLastTime;
 
     private String httpRedirect;
@@ -78,11 +78,11 @@ public class DomainEntry {
     }
 
     @Column(name="http_status")
-    public int getHttpStatusCode() {
+    public Integer getHttpStatusCode() {
         return this.httpStatusCode;
     }
 
-    public void setHttpStatusCode(int httpStatusCode) {
+    public void setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
     }
 
@@ -96,11 +96,11 @@ public class DomainEntry {
     }
 
     @Column(name="https_status")
-    public int getHttpsStatusCode() {
+    public Integer getHttpsStatusCode() {
         return this.httpsStatusCode;
     }
 
-    public void setHttpsStatusCode(int httpsStatusCode) {
+    public void setHttpsStatusCode(Integer httpsStatusCode) {
         this.httpsStatusCode = httpsStatusCode;
     }
 
